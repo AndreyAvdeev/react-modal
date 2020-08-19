@@ -21,6 +21,7 @@ class ModalTest extends Component {
           onHide={() => {
             //callback after modal hide
           }}
+          draggable={true}
         >
           {(data) => {
             return (

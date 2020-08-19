@@ -22,16 +22,16 @@
 .modal {
   width: 500px;
   max-width: 100%;
-  height: auto;
-  max-height: 100%;
+  height: max-content;
   display: block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
   background: #fff;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
   border-radius: 8px;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   &_head {
@@ -61,23 +61,6 @@
   opacity: 1;
 }
 
-@keyframes slideUp {
-  0% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-@-webkit-keyframes slideUp {
-  0% {
-    -webkit-transform: translateY(50%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-  }
-}
 
 @media (max-width: 960px) {
   .modal_active_content {
